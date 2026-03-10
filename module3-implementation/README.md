@@ -12,8 +12,8 @@ description: 태스크를 하나씩 실행해서 실제 동작하는 웹 애플�
 
 ```mermaid
 graph LR
-    A["태스크 실행\n체크박스 클릭!"] --> B["Kiro가 코드 작성\n자동으로 파일 생성"]
-    B --> C["브라우저에서 확인\n실제로 동작!"]
+    A["태스크 실행<br/>체크박스 클릭!"] --> B["Kiro가 코드 작성<br/>자동으로 파일 생성"]
+    B --> C["브라우저에서 확인<br/>실제로 동작!"]
 
     style A fill:#43e97b,color:#fff
     style B fill:#4facfe,color:#fff

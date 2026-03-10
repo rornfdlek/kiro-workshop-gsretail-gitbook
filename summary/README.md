@@ -28,7 +28,7 @@ graph LR
     A["말로 설명"] --> B["요구사항"]
     B --> C["설계"]
     C --> D["태스크"]
-    D --> E["완성된 코드"]
+    D --> E["완성된<br/>코드"]
 
     style A fill:#667eea,color:#fff
     style B fill:#f5576c,color:#fff
