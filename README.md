@@ -1,43 +1,59 @@
 ---
-description: GS Retail 개발자를 위한 Kiro IDE 핸즈온 워크샵
+description: GS Retail 임직원을 위한 Kiro IDE 핸즈온 워크샵 - AI가 코드를 대신 만들어주는 경험!
 ---
 
 # Kiro Day for GS Retail
 
+## Kiro가 뭔가요?
+
+> **"만들고 싶은 것을 말로 설명하면, Kiro가 코드를 만들어줍니다."**
+
+Kiro는 AWS에서 만든 **AI 개발 도구**입니다. 개발 경험이 없어도, 여러분이 원하는 시스템을 **자연어(한국어)로 설명**하면 Kiro가 알아서 코드를 작성해줍니다.
+
+<figure><img src=".gitbook/assets/kiro-workflow.svg" alt="Kiro 워크플로우 - 프롬프트를 입력하면 요구사항, 설계, 태스크를 거쳐 코드가 완성됩니다"><figcaption><p>여러분은 1번만 하면 됩니다. 나머지는 Kiro가!</p></figcaption></figure>
+
 {% hint style="info" %}
-**Kiro**는 AWS에서 만든 AI 기반 개발 도구로, 프로토타입에서 프로덕션까지 전체 개발 과정을 지원하는 **Agentic AI IDE**입니다. 단순한 코드 생성을 넘어, **"Spec-driven Development(스펙 기반 개발)"** 방식을 통해 여러분의 자연어 프롬프트를 명확한 요구사항, 시스템 설계, 그리고 구현 태스크로 체계적으로 변환해 줍니다.
+**프롬프트**란? Kiro에게 보내는 메시지를 뜻합니다. 카카오톡처럼 채팅창에 하고 싶은 말을 입력하면 됩니다!
 {% endhint %}
 
-## 오늘 만들 것
+---
 
-**GS25 Auto Order** - GS Retail의 편의점(GS25) 발주 자동화 시스템
+## 오늘 만들 것: GS25 발주 자동화 시스템
 
-판매 데이터와 재고 현황을 기반으로 최적의 발주량을 자동 계산하고, 점주가 웹에서 발주를 승인/수정할 수 있는 **풀스택 웹 애플리케이션**을 Kiro와 함께 구축합니다.
+편의점 점주가 **재고 확인 → 발주량 결정 → 발주 승인**을 수작업으로 하는 대신, 시스템이 자동으로 해주는 **웹 애플리케이션**을 만듭니다.
 
-```mermaid
-graph LR
-    M1[Module 1<br/>Kiro 시작하기] --> M2[Module 2<br/>Spec-driven Development]
-    M2 --> M3[Module 3<br/>구현 및 실행]
+<figure><img src=".gitbook/assets/before-after.svg" alt="수작업 발주 vs 자동 발주 비교"><figcaption><p>오늘 워크샵이 끝나면 오른쪽 같은 시스템을 갖게 됩니다!</p></figcaption></figure>
 
-    style M1 fill:#e1f5fe
-    style M2 fill:#fff3e0
-    style M3 fill:#f3e5f5
-```
+### 이런 기능이 포함됩니다
 
-## 모듈 구성
+| 기능 | 설명 | 누구에게 도움? |
+|------|------|---------------|
+| 📊 **판매 분석 대시보드** | 어떤 상품이 잘 팔리는지 차트로 확인 | 점주, 본사 |
+| 🤖 **자동 발주량 계산** | 7일간 판매 데이터로 최적 수량 추천 | 점주 |
+| 📦 **재고 현황 모니터링** | 재고 부족 상품 자동 알림 | 점주 |
+| ✅ **발주 승인/수정** | 웹에서 클릭 한 번으로 발주 완료 | 점주 |
 
-| 모듈 | 내용 | 소요 시간 |
-|------|------|-----------|
-| **Module 1** | Kiro 소개 및 환경 설정 | 20분 |
-| **Module 2** | 프롬프트 기반 Spec 개발 (Requirements → Design → Tasks) | 60분 |
-| **Module 3** | 태스크 실행 및 애플리케이션 구동 | 60분 |
+---
 
-## 사전 준비
+## 워크샵 진행 순서
 
-* Kiro IDE 설치: [https://kiro.dev/](https://kiro.dev/)
-* Node.js 18+ 설치
-* 기본적인 웹 개발 이해 (React, Node.js)
+| 순서 | 내용 | 소요 시간 | 난이도 |
+|------|------|-----------|--------|
+| **Module 1** | Kiro 시작하기 - 프롬프트 입력 | 20분 | ⭐ |
+| **Module 2** | Spec 문서 자동 생성 | 60분 | ⭐⭐ |
+| **Module 3** | 코드 생성 & 실행 | 60분 | ⭐ |
 
 {% hint style="success" %}
-Kiro는 AWS 계정 없이도 로컬 환경에서 실습할 수 있습니다.
+**코딩을 몰라도 괜찮아요!** Kiro에게 말로 설명하기만 하면 됩니다. AWS 계정도 필요 없어요.
+{% endhint %}
+
+## 시작 전 준비물
+
+두 가지만 설치하면 됩니다:
+
+1. **Kiro** — AI 개발 도구 ([다운로드](https://kiro.dev/))
+2. **Node.js** — 코드 실행 환경 ([다운로드](https://nodejs.org/))
+
+{% hint style="warning" %}
+설치가 어려우시면 옆 사람이나 진행자에게 도움을 요청하세요! 설치는 5분이면 끝납니다.
 {% endhint %}

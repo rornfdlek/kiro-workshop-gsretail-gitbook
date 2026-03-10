@@ -1,30 +1,44 @@
 ---
-description: 요구사항 기반 설계 문서 자동 생성 및 데이터 모델 상세화
+description: 요구사항을 바탕으로 시스템 설계도를 자동 생성합니다
 ---
 
 # Design - 설계 문서 생성
 
-## 디자인 문서 작성 요청
+## 설계 문서란?
 
-요구사항 문서가 완성되었으면, Kiro에게 설계 문서 작성을 요청합니다.
+> "요구사항을 실제로 어떻게 구현할 것인가"를 정리한 설계도입니다.
 
-{% code title="프롬프트" %}
+건축에 비유하면, "3층 카페를 짓겠다"(요구사항)를 바탕으로 **평면도, 배관도, 전기 도면**을 그리는 과정입니다.
+
+## 프롬프트 보내기
+
+{% code title="📋 복사해서 붙여넣기" %}
 ```
 이대로 디자인 문서를 만들어주세요.
 ```
 {% endcode %}
 
-Kiro가 `requirements.md`를 기반으로 `design.md` 파일을 자동 생성합니다.
+Kiro가 `requirements.md`를 읽고, `design.md` 파일을 자동으로 생성합니다.
 
-## (선택) 데이터 모델 상세화
+## 생성되는 설계도
 
-더 정확한 설계를 위해, 데이터 모델을 직접 상세하게 지정할 수 있습니다. 아래 프롬프트는 **선택 사항**입니다.
+우리 시스템은 크게 **3개 층**으로 구성됩니다:
+
+<figure><img src="../.gitbook/assets/gs25-system-overview.svg" alt="GS25 발주 자동화 시스템 구조도"><figcaption><p>점주가 웹 화면에서 조작하면, 서버가 데이터를 처리하고, 데이터베이스에 저장됩니다</p></figcaption></figure>
+
+{% hint style="info" %}
+**쉽게 이해하기**: 웹 화면(Frontend)은 식당의 **홀**, 서버(Backend)는 **주방**, 데이터베이스는 **냉장고**입니다. 손님(점주)이 홀에서 주문하면, 주방에서 요리하고, 재료는 냉장고에서 꺼내옵니다.
+{% endhint %}
+
+## (선택) 데이터 구조를 더 구체적으로 알려주기
+
+시간이 충분하다면, 각 테이블의 상세 구조를 Kiro에게 직접 알려줄 수 있습니다. **건너뛰어도 괜찮습니다!**
 
 <details>
 
-<summary>데이터 모델 상세화 프롬프트 (선택)</summary>
+<summary>📋 데이터 모델 상세화 프롬프트 (선택 - 클릭해서 펼치기)</summary>
 
-{% code title="프롬프트" %}
+{% code title="선택 프롬프트" %}
 ```
 1. product 테이블 - 용도: 상품 등록 정보 및 기본 메타데이터 관리
 Primary Key:
@@ -60,50 +74,6 @@ Primary Key:
 
 </details>
 
-## 생성되는 설계 문서 확인
-
-`design.md` 파일에는 다음 내용이 포함됩니다:
-
-```mermaid
-graph TD
-    subgraph "Frontend - React"
-        UI[웹 UI]
-        DASH[대시보드]
-        SIM[판매 시뮬레이터]
-    end
-
-    subgraph "Backend - Express/TypeScript"
-        API[REST API]
-        CALC[발주량 계산 엔진]
-    end
-
-    subgraph "Database - SQLite"
-        PROD[product]
-        INV[inventory]
-        SALES[sales_history]
-        ORD[order]
-    end
-
-    UI --> API
-    DASH --> API
-    SIM --> API
-    API --> CALC
-    API --> PROD
-    API --> INV
-    API --> SALES
-    CALC --> ORD
-
-    style UI fill:#e1f5fe
-    style API fill:#fff3e0
-    style PROD fill:#f3e5f5
-```
-
-### 설계 문서 주요 섹션
-
-| 섹션 | 내용 |
-|------|------|
-| 시스템 아키텍처 | Frontend/Backend/Database 구조 |
-| API 설계 | REST 엔드포인트 정의 |
-| 데이터 모델 | 테이블 스키마 상세 |
-| 컴포넌트 설계 | React 컴포넌트 구조 |
-| 디렉토리 구조 | 프로젝트 폴더 레이아웃 |
+{% hint style="success" %}
+설계 문서가 만들어졌으면, 이제 마지막 단계인 **태스크 문서**를 만들 차례입니다!
+{% endhint %}

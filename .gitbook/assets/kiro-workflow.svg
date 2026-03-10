@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="320" rx="16" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#24292e">Kiro의 Spec-driven Development 워크플로우</text>
+
+  <!-- Step 1: Prompt -->
+  <rect x="30" y="70" width="130" height="100" rx="12" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="95" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">💬</text>
+  <text x="95" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">프롬프트</text>
+  <text x="95" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">만들고 싶은 것을</text>
+  <text x="95" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">말로 설명</text>
+
+  <!-- Arrow 1 -->
+  <path d="M165 120 L190 120" stroke="#667eea" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+  <polygon points="190,115 200,120 190,125" fill="#667eea"/>
+
+  <!-- Step 2: Requirements -->
+  <rect x="205" y="70" width="130" height="100" rx="12" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="270" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">📋</text>
+  <text x="270" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">요구사항</text>
+  <text x="270" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">무엇을 만들지</text>
+  <text x="270" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">자동 정리</text>
+
+  <!-- Arrow 2 -->
+  <path d="M340 120 L365 120" stroke="#f5576c" stroke-width="2.5" fill="none"/>
+  <polygon points="365,115 375,120 365,125" fill="#f5576c"/>
+
+  <!-- Step 3: Design -->
+  <rect x="380" y="70" width="130" height="100" rx="12" fill="url(#grad3)" filter="url(#shadow)"/>
+  <text x="445" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">🏗️</text>
+  <text x="445" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">설계</text>
+  <text x="445" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">어떻게 만들지</text>
+  <text x="445" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">구조를 설계</text>
+
+  <!-- Arrow 3 -->
+  <path d="M515 120 L540 120" stroke="#00f2fe" stroke-width="2.5" fill="none"/>
+  <polygon points="540,115 550,120 540,125" fill="#00f2fe"/>
+
+  <!-- Step 4: Tasks -->
+  <rect x="555" y="70" width="130" height="100" rx="12" fill="url(#grad4)" filter="url(#shadow)"/>
+  <text x="620" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">✅</text>
+  <text x="620" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">태스크</text>
+  <text x="620" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">할 일 목록을</text>
+  <text x="620" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">자동 분해</text>
+
+  <!-- Arrow 4 (down) -->
+  <path d="M620 175 L620 200" stroke="#38f9d7" stroke-width="2.5" fill="none"/>
+  <polygon points="615,200 620,210 625,200" fill="#38f9d7"/>
+
+  <!-- Step 5: Code -->
+  <rect x="460" y="215" width="320" height="80" rx="12" fill="url(#grad5)" filter="url(#shadow)"/>
+  <text x="540" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">🎉</text>
+  <text x="640" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">완성된 애플리케이션!</text>
+  <text x="640" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">Kiro가 태스크를 하나씩 실행하면 코드가 완성됩니다</text>
+
+  <!-- Bottom note -->
+  <rect x="30" y="215" width="400" height="80" rx="12" fill="#f6f8fa" stroke="#e1e4e8" stroke-width="1"/>
+  <text x="230" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#586069">여러분이 할 일은 ①번 프롬프트 입력뿐!</text>
+  <text x="230" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6a737d">②~⑤는 Kiro가 자동으로 처리합니다 ✨</text>
+
+  <!-- Step numbers -->
+  <circle cx="50" cy="85" r="10" fill="white" opacity="0.3"/>
+  <text x="50" y="89" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">①</text>
+  <circle cx="225" cy="85" r="10" fill="white" opacity="0.3"/>
+  <text x="225" y="89" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">②</text>
+  <circle cx="400" cy="85" r="10" fill="white" opacity="0.3"/>
+  <text x="400" y="89" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">③</text>
+  <circle cx="575" cy="85" r="10" fill="white" opacity="0.3"/>
+  <text x="575" y="89" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">④</text>
+</svg>

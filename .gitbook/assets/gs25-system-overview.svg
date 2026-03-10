@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <filter id="shadow2" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" rx="16" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#24292e">GS25 발주 자동화 시스템 - 이런 걸 만들어요!</text>
+
+  <!-- Store Owner -->
+  <rect x="30" y="60" width="160" height="180" rx="12" fill="#EBF5FB" stroke="#3498DB" stroke-width="1.5" filter="url(#shadow2)"/>
+  <text x="110" y="100" text-anchor="middle" font-size="40">🧑‍💼</text>
+  <text x="110" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2C3E50">편의점 점주</text>
+  <text x="110" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#5D6D7E">웹브라우저에서</text>
+  <text x="110" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#5D6D7E">발주를 확인하고</text>
+  <text x="110" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#5D6D7E">승인/수정합니다</text>
+  <rect x="55" y="195" width="110" height="30" rx="6" fill="#3498DB"/>
+  <text x="110" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">발주 승인 버튼 클릭!</text>
+
+  <!-- Arrow -->
+  <path d="M195 150 L250 150" stroke="#3498DB" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="250,145 260,150 250,155" fill="#3498DB"/>
+
+  <!-- Web App -->
+  <rect x="265" y="55" width="270" height="290" rx="12" fill="white" stroke="#2ECC71" stroke-width="2" filter="url(#shadow2)"/>
+  <rect x="265" y="55" width="270" height="35" rx="12" fill="#2ECC71"/>
+  <rect x="265" y="78" width="270" height="12" fill="#2ECC71"/>
+  <text x="400" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">GS25 Auto Order 웹 애플리케이션</text>
+
+  <!-- Feature 1 -->
+  <rect x="280" y="100" width="240" height="50" rx="8" fill="#FDEBD0" stroke="#F39C12" stroke-width="1"/>
+  <text x="310" y="125" font-family="Arial, sans-serif" font-size="20">📊</text>
+  <text x="340" y="120" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#E67E22">판매 분석 대시보드</text>
+  <text x="340" y="138" font-family="Arial, sans-serif" font-size="9" fill="#8B6914">어떤 상품이 잘 팔리는지 차트로 한눈에!</text>
+
+  <!-- Feature 2 -->
+  <rect x="280" y="160" width="240" height="50" rx="8" fill="#D5F5E3" stroke="#27AE60" stroke-width="1"/>
+  <text x="310" y="185" font-family="Arial, sans-serif" font-size="20">🤖</text>
+  <text x="340" y="180" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E8449">자동 발주량 계산</text>
+  <text x="340" y="198" font-family="Arial, sans-serif" font-size="9" fill="#196F3D">지난 7일 판매량 분석 → 최적 발주량 추천</text>
+
+  <!-- Feature 3 -->
+  <rect x="280" y="220" width="240" height="50" rx="8" fill="#D6EAF8" stroke="#2980B9" stroke-width="1"/>
+  <text x="310" y="245" font-family="Arial, sans-serif" font-size="20">📦</text>
+  <text x="340" y="240" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1A5276">재고 현황 모니터링</text>
+  <text x="340" y="258" font-family="Arial, sans-serif" font-size="9" fill="#1B4F72">재고 부족 상품을 빨간색으로 알림!</text>
+
+  <!-- Feature 4 -->
+  <rect x="280" y="280" width="240" height="50" rx="8" fill="#F5EEF8" stroke="#8E44AD" stroke-width="1"/>
+  <text x="310" y="305" font-family="Arial, sans-serif" font-size="20">🎮</text>
+  <text x="340" y="300" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6C3483">판매 시뮬레이터</text>
+  <text x="340" y="318" font-family="Arial, sans-serif" font-size="9" fill="#5B2C6F">가상 판매 데이터로 테스트 가능</text>
+
+  <!-- Arrow to DB -->
+  <path d="M540 200 L590 200" stroke="#E74C3C" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="590,195 600,200 590,205" fill="#E74C3C"/>
+
+  <!-- Database -->
+  <rect x="605" y="80" width="170" height="260" rx="12" fill="#FDEDEC" stroke="#E74C3C" stroke-width="1.5" filter="url(#shadow2)"/>
+  <text x="690" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#C0392B">데이터 저장소</text>
+
+  <rect x="620" y="125" width="140" height="40" rx="6" fill="white" stroke="#E74C3C" stroke-width="1"/>
+  <text x="640" y="145" font-family="Arial, sans-serif" font-size="16">🏷️</text>
+  <text x="660" y="148" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">상품 정보</text>
+
+  <rect x="620" y="175" width="140" height="40" rx="6" fill="white" stroke="#E74C3C" stroke-width="1"/>
+  <text x="640" y="195" font-family="Arial, sans-serif" font-size="16">📦</text>
+  <text x="660" y="198" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">재고 현황</text>
+
+  <rect x="620" y="225" width="140" height="40" rx="6" fill="white" stroke="#E74C3C" stroke-width="1"/>
+  <text x="640" y="245" font-family="Arial, sans-serif" font-size="16">🛒</text>
+  <text x="660" y="248" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">판매 이력</text>
+
+  <rect x="620" y="275" width="140" height="40" rx="6" fill="white" stroke="#E74C3C" stroke-width="1"/>
+  <text x="640" y="295" font-family="Arial, sans-serif" font-size="16">📝</text>
+  <text x="660" y="298" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">발주 내역</text>
+
+  <!-- Bottom banner -->
+  <rect x="30" y="365" width="740" height="40" rx="8" fill="#EBF5FB" stroke="#3498DB" stroke-width="1"/>
+  <text x="400" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2471A3">💡 이 모든 것을 Kiro에게 말로 설명하면, Kiro가 자동으로 코드를 만들어줍니다!</text>
+</svg>
