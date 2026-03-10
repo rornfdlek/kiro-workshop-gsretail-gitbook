@@ -10,7 +10,7 @@ description: GS Retail 임직원을 위한 Kiro IDE 핸즈온 워크샵 - AI가 
 
 Kiro는 AWS에서 만든 **AI 개발 도구**입니다. 개발 경험이 없어도, 여러분이 원하는 시스템을 **자연어(한국어)로 설명**하면 Kiro가 알아서 코드를 작성해줍니다.
 
-<figure><img src=".gitbook/assets/kiro-workflow.svg" alt="Kiro 워크플로우 - 프롬프트를 입력하면 요구사항, 설계, 태스크를 거쳐 코드가 완성됩니다"><figcaption><p>여러분은 1번만 하면 됩니다. 나머지는 Kiro가!</p></figcaption></figure>
+<figure><img src=".gitbook/assets/kiro-workflow.svg" alt="Kiro 워크플로우 - 프롬프트를 입력하면 요구사항, 설계, 태스크를 거쳐 코드가 완성됩니다" width="100%"><figcaption><p>여러분은 1번만 하면 됩니다. 나머지는 Kiro가!</p></figcaption></figure>
 
 {% hint style="info" %}
 **프롬프트**란? Kiro에게 보내는 메시지를 뜻합니다. 카카오톡처럼 채팅창에 하고 싶은 말을 입력하면 됩니다!
@@ -22,7 +22,7 @@ Kiro는 AWS에서 만든 **AI 개발 도구**입니다. 개발 경험이 없어�
 
 편의점 점주가 **재고 확인 → 발주량 결정 → 발주 승인**을 수작업으로 하는 대신, 시스템이 자동으로 해주는 **웹 애플리케이션**을 만듭니다.
 
-<figure><img src=".gitbook/assets/before-after.svg" alt="수작업 발주 vs 자동 발주 비교"><figcaption><p>오늘 워크샵이 끝나면 오른쪽 같은 시스템을 갖게 됩니다!</p></figcaption></figure>
+<figure><img src=".gitbook/assets/before-after.svg" alt="수작업 발주 vs 자동 발주 비교" width="100%"><figcaption><p>오늘 워크샵이 끝나면 오른쪽 같은 시스템을 갖게 됩니다!</p></figcaption></figure>
 
 ### 이런 기능이 포함됩니다
 

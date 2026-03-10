@@ -10,8 +10,8 @@ description: Kiro가 자동으로 요구사항, 설계, 태스크 문서를 만�
 
 ```mermaid
 graph LR
-    R["📋 요구사항\nrequirements.md"] --> D["🏗️ 설계\ndesign.md"]
-    D --> T["✅ 태스크\ntasks.md"]
+    R["요구사항\nrequirements.md"] --> D["설계\ndesign.md"]
+    D --> T["태스크\ntasks.md"]
 
     style R fill:#f5576c,color:#fff
     style D fill:#4facfe,color:#fff

@@ -24,7 +24,7 @@ Kiro가 `requirements.md`를 읽고, `design.md` 파일을 자동으로 생성�
 
 우리 시스템은 크게 **3개 층**으로 구성됩니다:
 
-<figure><img src="../.gitbook/assets/gs25-system-overview.svg" alt="GS25 발주 자동화 시스템 구조도"><figcaption><p>점주가 웹 화면에서 조작하면, 서버가 데이터를 처리하고, 데이터베이스에 저장됩니다</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/gs25-system-overview.svg" alt="GS25 발주 자동화 시스템 구조도" width="100%"><figcaption><p>점주가 웹 화면에서 조작하면, 서버가 데이터를 처리하고, 데이터베이스에 저장됩니다</p></figcaption></figure>
 
 {% hint style="info" %}
 **쉽게 이해하기**: 웹 화면(Frontend)은 식당의 **홀**, 서버(Backend)는 **주방**, 데이터베이스는 **냉장고**입니다. 손님(점주)이 홀에서 주문하면, 주방에서 요리하고, 재료는 냉장고에서 꺼내옵니다.

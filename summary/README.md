@@ -25,10 +25,10 @@ description: 오늘 만든 결과물을 정리하고, 앞으로의 가능성을 
 
 ```mermaid
 graph LR
-    A["💬 말로 설명"] --> B["📋 요구사항"]
-    B --> C["🏗️ 설계"]
-    C --> D["✅ 태스크"]
-    D --> E["💻 완성된 코드"]
+    A["말로 설명"] --> B["요구사항"]
+    B --> C["설계"]
+    C --> D["태스크"]
+    D --> E["완성된 코드"]
 
     style A fill:#667eea,color:#fff
     style B fill:#f5576c,color:#fff
