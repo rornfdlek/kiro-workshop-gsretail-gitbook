@@ -36,7 +36,7 @@ pip install strands-agents fastapi uvicorn boto3
 `strands-agents-bedrock`은 별도 패키지가 아니라 `strands-agents`에 포함되어 있으므로 따로 설치할 필요 없습니다.
 {% endhint %}
 
----
+***
 
 ## 실행하기
 
@@ -68,38 +68,43 @@ INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 http://localhost:8000
 ```
 
----
+***
 
 ## 테스트해보기
 
 채팅 화면에서 다양한 질문을 해보세요!
 
-| 질문 유형 | 예시 질문 |
-|-----------|-----------|
-| 상품 정보 | "카페25 아메리카노 가격이 얼마야?" |
-| 발주 정책 | "안전재고는 어떻게 설정되어 있어?" |
-| 운영 절차 | "야간 근무자의 업무는?" |
-| 특수 상황 | "행사 기간에는 발주를 어떻게 해?" |
+<figure><img src="../.gitbook/assets/Screenshot 2026-03-18 at 8.40.55 PM.png" alt=""><figcaption></figcaption></figure>
+
+{% file src="../.gitbook/assets/My Movie 6.mp4" %}
+
+| 질문 유형 | 예시 질문                       |
+| ----- | --------------------------- |
+| 상품 정보 | "카페25 아메리카노 가격이 얼마야?"       |
+| 발주 정책 | "안전재고는 어떻게 설정되어 있어?"        |
+| 운영 절차 | "야간 근무자의 업무는?"              |
+| 특수 상황 | "행사 기간에는 발주를 어떻게 해?"        |
 | 복합 질문 | "비오는 주말에 도시락 발주량은 어떻게 계산해?" |
 
 ### 잘 되고 있는지 체크
 
-| 항목 | 확인 |
-|------|------|
-| Knowledge Base에서 검색된 정보로 답변하는가? | ☐ |
-| 문서에 없는 내용에 대해 "정보가 없다"고 하는가? | ☐ |
-| 한국어로 자연스럽게 답변하는가? | ☐ |
-| 여러 문서의 정보를 조합하여 답변하는가? | ☐ |
+| 항목                              | 확인 |
+| ------------------------------- | -- |
+| Knowledge Base에서 검색된 정보로 답변하는가? | ☐  |
+| 문서에 없는 내용에 대해 "정보가 없다"고 하는가?    | ☐  |
+| 한국어로 자연스럽게 답변하는가?               | ☐  |
+| 여러 문서의 정보를 조합하여 답변하는가?          | ☐  |
 
 {% hint style="success" %}
 **축하합니다!** Kiro가 만들어준 코드로 **Bedrock Knowledge Base + Strands Agent + 채팅 UI**를 연결한 완전한 RAG 에이전트 시스템을 구축했습니다! 🎉
 {% endhint %}
 
----
+***
 
 ## 문제가 생기면?
 
 <details>
+
 <summary>🆘 에이전트가 "정보를 찾지 못했습니다"라고만 해요</summary>
 
 1. `agent.py`의 **Knowledge Base ID**가 정확한지 확인
@@ -109,17 +114,20 @@ http://localhost:8000
 </details>
 
 <details>
+
 <summary>🆘 ModuleNotFoundError가 나와요</summary>
 
 가상환경이 활성화되었는지 확인하세요:
 
 **Mac/Linux:**
+
 ```bash
 source .venv/bin/activate
 pip install strands-agents fastapi uvicorn boto3
 ```
 
 **Windows (PowerShell):**
+
 ```powershell
 .venv\Scripts\Activate
 pip install strands-agents fastapi uvicorn boto3
@@ -128,6 +136,7 @@ pip install strands-agents fastapi uvicorn boto3
 </details>
 
 <details>
+
 <summary>🆘 AWS 자격 증명 오류가 나와요</summary>
 
 ```bash
@@ -140,6 +149,7 @@ aws configure
 </details>
 
 <details>
+
 <summary>🆘 Kiro가 만든 코드에 오류가 있어요</summary>
 
 Kiro에게 알려주면 됩니다:
