@@ -6,11 +6,11 @@ description: Kiro를 사용해서 Strands RAG 에이전트를 만들고 채팅 U
 
 ## 이 모듈에서 할 것
 
-Module 4에서 만든 Knowledge Base를 활용하는 **AI 채팅 에이전트**를 만듭니다. Module 1~3에서 했던 것처럼, **Kiro에게 말로 설명하면 Kiro가 코드를 만들어줍니다!**
+Module 4에서 만든 Knowledge Base를 활용하는 **AI 채팅 에이전트**를 만듭니다. 이번에는 Part 1과 다른 방식으로 — **스펙 파일 하나 + 프롬프트 하나**로 바이브 코딩합니다!
 
 ```mermaid
 graph LR
-    A["Kiro에게<br/>프롬프트 입력"] --> B["Kiro가<br/>에이전트 코드 생성"]
+    A["스펙 파일<br/>만들기"] --> B["프롬프트 하나로<br/>바이브 코딩"]
     B --> C["실행하면<br/>채팅 UI 완성!"]
 
     style A fill:#43e97b,color:#fff
@@ -19,7 +19,7 @@ graph LR
 ```
 
 {% hint style="info" %}
-Part 1에서 Kiro로 웹 애플리케이션을 만들었던 것처럼, 이번에도 **Kiro 채팅창에 프롬프트를 입력하는 것만으로** AI 에이전트를 만듭니다!
+**Part 1과의 차이**: Part 1에서는 여러 프롬프트 → 요구사항 → 설계 → 태스크를 거쳤습니다. 이번에는 **스펙 파일을 미리 준비해두고 프롬프트 하나**로 끝내는 바이브 코딩 방식을 체험합니다!
 {% endhint %}
 
 ## 사전 준비
