@@ -12,16 +12,18 @@ description: 오늘 만든 결과물을 정리하고, 앞으로의 가능성을 
 
 말로 설명하는 것만으로 이런 것들이 만들어졌습니다:
 
-| 만들어진 것 | 파일 | 한 줄 설명 |
-|------------|------|-----------|
+| 만들어진 것 | 파일/서비스 | 한 줄 설명 |
+|------------|-------------|-----------|
 | 📋 요구사항 문서 | `requirements.md` | "이런 기능이 필요해요" 정리 |
 | 🏗️ 설계 문서 | `design.md` | "이렇게 만들겠습니다" 설계도 |
 | ✅ 태스크 문서 | `tasks.md` | "이 순서로 만들겠습니다" 체크리스트 |
 | 💻 소스 코드 | `src/` 폴더 | 실제 동작하는 웹 애플리케이션 |
+| 🧠 Knowledge Base | Bedrock KB | GS25 운영 문서 기반 RAG 시스템 |
+| 🤖 AI 에이전트 | `gs25-rag-agent/` | Strands Agent + 채팅 UI |
 
 ## 오늘 배운 핵심
 
-### Kiro의 마법: "말 → 코드"
+### Part 1: Kiro의 마법 — "말 → 코드"
 
 ```mermaid
 graph LR
@@ -42,11 +44,30 @@ graph LR
 3. **오류가 나면 알려주기만** 하면 → Kiro가 스스로 고칩니다
 4. **문서가 자동 생성**되므로 → 팀원과 공유하기 쉽습니다
 
+### Part 2: RAG와 AI 에이전트 — "문서 → AI 도우미"
+
+```mermaid
+graph LR
+    A["문서 업로드"] --> B["Knowledge Base"]
+    B --> C["Strands Agent"]
+    C --> D["채팅 UI"]
+
+    style A fill:#43e97b,color:#fff
+    style B fill:#4facfe,color:#fff
+    style C fill:#667eea,color:#fff
+    style D fill:#fa709a,color:#fff
+```
+
+1. **RAG**를 사용하면 → AI가 우리 문서에 근거한 정확한 답변을 합니다
+2. **Bedrock Knowledge Base**로 → 복잡한 RAG 파이프라인을 쉽게 구축합니다
+3. **Strands Agent**로 → 도구를 사용하는 AI 에이전트를 몇 줄 코드로 만듭니다
+4. **채팅 UI**를 붙이면 → 누구나 사용할 수 있는 AI 도우미 완성!
+
 ---
 
 ## 더 나아가기: 실제 서비스로 전환한다면?
 
-오늘은 내 노트북에서 테스트했지만, 실제 GS25 매장에서 사용하려면 **클라우드(AWS)**로 올려야 합니다. Kiro가 미리 구조를 잡아놨기 때문에 전환이 쉽습니다:
+오늘은 내 노트북에서 테스트했지만, 실제 GS25 매장에서 사용하려면 **클라우드(AWS)**로 올려야 합니다:
 
 | 오늘 사용한 것 | 실제 서비스에서는 | 왜 바꾸나요? |
 |---------------|------------------|-------------|
@@ -54,6 +75,9 @@ graph LR
 | Express Server (내 노트북) | AWS Lambda | 자동 확장, 서버 관리 불필요 |
 | localhost (내 브라우저) | S3 + CloudFront | 전국 어디서든 빠르게 접속 |
 | 시뮬레이터 (가상 데이터) | 실제 POS 연동 | 실매출 데이터 자동 수집 |
+| 단일 에이전트 | 멀티 에이전트 | 발주/재고/분석 각각 전문 에이전트 |
+| 3개 샘플 문서 | 실제 운영 데이터 | 전 매장 운영 매뉴얼 연동 |
+| 로컬 FastAPI | Lambda Web Adapter | 서버리스로 자동 확장 |
 
 ---
 
@@ -61,6 +85,8 @@ graph LR
 
 * Kiro 공식 사이트: [https://kiro.dev/](https://kiro.dev/)
 * Kiro 사용 가이드: [https://kiro.dev/docs/](https://kiro.dev/docs/)
+* Amazon Bedrock Knowledge Base: [https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)
+* Strands Agents SDK: [https://github.com/strands-agents/sdk-python](https://github.com/strands-agents/sdk-python)
 
 {% hint style="success" %}
 **수고하셨습니다!** 오늘 워크샵에서 경험한 것처럼, AI 도구를 활용하면 아이디어를 빠르게 프로토타입으로 만들어볼 수 있습니다. 업무에서 "이런 시스템이 있으면 좋겠는데..."라는 생각이 들면, Kiro에게 말해보세요! 🚀

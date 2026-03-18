@@ -16,8 +16,15 @@ GS Retail은 전국 수천 개의 GS25 편의점을 운영하고 있습니다. �
 * 😰 **너무 적게 주문** → 상품이 없어서 못 팔게 됨 (매출 손실)
 
 {% hint style="info" %}
-**오늘의 목표**: 판매 데이터를 분석해서 **"이 상품은 몇 개를 주문하는 게 좋겠어요"**라고 알려주는 시스템을 만드는 것입니다!
+**오늘의 목표**: 판매 데이터를 분석해서 **"이 상품은 몇 개를 주문하는 게 좋겠어요"**라고 알려주는 시스템을 만들고, 매장 운영 문서를 기반으로 **"발주 정책이 어떻게 되나요?"**라고 물으면 AI가 문서를 찾아서 답해주는 **AI 매장 도우미**까지 만드는 것입니다!
 {% endhint %}
+
+### 워크샵 두 파트
+
+| Part | 내용 | 도구 |
+|------|------|------|
+| **Part 1** (Module 1~3) | 발주 자동화 웹 앱 만들기 | Kiro IDE |
+| **Part 2** (Module 4~5) | AI 매장 도우미 채팅봇 만들기 | Bedrock KB + Strands Agent |
 
 ---
 
@@ -55,4 +62,32 @@ graph TD
 
 {% hint style="success" %}
 핵심은 **여러분은 첫 번째 단계(말로 설명하기)만 하면 된다**는 것입니다. 나머지는 Kiro가 자동으로 처리합니다!
+{% endhint %}
+
+---
+
+## Part 2에서는 뭘 하나요?
+
+Part 1에서 만든 GS25 매장 지식(상품 정보, 발주 정책, 운영 매뉴얼)을 활용해서 **AI 매장 도우미**를 만듭니다.
+
+```mermaid
+graph LR
+    A["매장 운영 문서"] --> B["Bedrock<br/>Knowledge Base"]
+    B --> C["AI 에이전트"]
+    C --> D["채팅 UI에서<br/>점주와 대화"]
+
+    style A fill:#43e97b,color:#fff
+    style B fill:#4facfe,color:#fff
+    style C fill:#667eea,color:#fff
+    style D fill:#fa709a,color:#fff
+```
+
+| 기술 | 쉬운 설명 |
+|------|-----------|
+| **RAG** | AI가 답변 전에 문서를 먼저 찾아보는 기술 (오픈북 시험!) |
+| **Bedrock Knowledge Base** | 문서를 AI가 검색할 수 있게 만들어주는 AWS 서비스 |
+| **Strands Agent** | AI에게 도구를 쓰는 능력을 부여하는 프레임워크 |
+
+{% hint style="info" %}
+자세한 내용은 Module 4~5에서 차근차근 배웁니다. 지금은 "Part 2도 있구나!" 정도만 알면 됩니다.
 {% endhint %}

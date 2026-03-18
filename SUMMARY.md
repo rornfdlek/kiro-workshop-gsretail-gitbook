@@ -26,6 +26,20 @@
 * [태스크 실행 - 코드 생성](module3-implementation/build.md)
 * [애플리케이션 실행](module3-implementation/run.md)
 
+## Module 4: RAG와 Knowledge Base
+
+* [모듈 개요](module4-rag-knowledgebase/README.md)
+* [RAG 개념 이해](module4-rag-knowledgebase/rag-concepts.md)
+* [Knowledge Base 생성](module4-rag-knowledgebase/create-kb.md)
+* [Knowledge Base 테스트](module4-rag-knowledgebase/test-kb.md)
+
+## Module 5: Strands RAG 에이전트
+
+* [모듈 개요](module5-strands-agent/README.md)
+* [Strands Agent 소개](module5-strands-agent/strands-intro.md)
+* [RAG 에이전트 구현](module5-strands-agent/rag-agent.md)
+* [채팅 UI 실행](module5-strands-agent/chat-ui.md)
+
 ## 마무리
 
 * [워크샵 마무리](summary/README.md)
