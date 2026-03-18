@@ -42,7 +42,7 @@ graph TD
 
 | 구성 요소 | 쉬운 설명 |
 |-----------|-----------|
-| **Model** | AI의 두뇌 (Claude) |
+| **Model** | AI의 두뇌 (Claude Sonnet 4) |
 | **Tools** | AI가 사용할 수 있는 기능들 (검색, 계산 등) |
 | **System Prompt** | "너는 GS25 매장 도우미야"라는 역할 부여 |
 

@@ -10,18 +10,31 @@ description: Kiro가 만든 에이전트를 실행하고 채팅 UI에서 대화�
 
 Kiro 채팅에서 실행을 요청하기 전에, 먼저 터미널에서 가상환경을 준비합니다:
 
+**Mac/Linux:**
+
 ```bash
 cd gs25-rag-agent
 python3 -m venv .venv
-source .venv/bin/activate   # Mac/Linux
-# .venv\Scripts\activate    # Windows
+source .venv/bin/activate
+pip install strands-agents fastapi uvicorn boto3
 ```
 
-### 패키지 설치
+**Windows (PowerShell):**
 
-```bash
-pip install strands-agents strands-agents-bedrock fastapi uvicorn boto3
+```powershell
+cd gs25-rag-agent
+python -m venv .venv
+.venv\Scripts\Activate
+pip install strands-agents fastapi uvicorn boto3
 ```
+
+{% hint style="warning" %}
+**macOS에서 Homebrew Python을 사용하는 경우**, 시스템 Python에 직접 패키지를 설치할 수 없습니다 (`externally-managed-environment` 오류). **반드시 가상환경을 만든 후** 패키지를 설치해야 합니다!
+{% endhint %}
+
+{% hint style="info" %}
+`strands-agents-bedrock`은 별도 패키지가 아니라 `strands-agents`에 포함되어 있으므로 따로 설치할 필요 없습니다.
+{% endhint %}
 
 ---
 
@@ -100,9 +113,16 @@ http://localhost:8000
 
 가상환경이 활성화되었는지 확인하세요:
 
+**Mac/Linux:**
 ```bash
 source .venv/bin/activate
-pip install strands-agents strands-agents-bedrock fastapi uvicorn boto3
+pip install strands-agents fastapi uvicorn boto3
+```
+
+**Windows (PowerShell):**
+```powershell
+.venv\Scripts\Activate
+pip install strands-agents fastapi uvicorn boto3
 ```
 
 </details>

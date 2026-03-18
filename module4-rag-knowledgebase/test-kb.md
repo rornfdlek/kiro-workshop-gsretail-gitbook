@@ -11,7 +11,7 @@ Knowledge Base 상세 페이지 오른쪽에 **테스트 패널**이 있습니�
 ### 테스트 방법
 
 1. 오른쪽 **Test knowledge base** 패널 확인
-2. **Select model** 클릭 → **Claude 3.5 Sonnet** (또는 Claude 3 Haiku) 선택
+2. **Select model** 클릭 → **Claude Sonnet 4** (또는 Claude 3.5 Haiku) 선택
 3. 아래 질문들을 하나씩 입력해보세요!
 
 ### 질문 해보기

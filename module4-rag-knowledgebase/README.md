@@ -27,7 +27,7 @@ graph LR
 1. AWS 콘솔에서 **Amazon Bedrock** 서비스로 이동 (리전: **us-east-1**)
 2. 좌측 메뉴에서 **Model access** 클릭
 3. 아래 모델들의 액세스를 활성화:
-   * **Anthropic > Claude 3.5 Sonnet** (또는 Claude 3 Haiku)
+   * **Anthropic > Claude Sonnet 4** (또는 Claude 3.5 Haiku)
    * **Amazon > Titan Text Embeddings V2**
 
 ## 사전 준비: AWS CLI 설정

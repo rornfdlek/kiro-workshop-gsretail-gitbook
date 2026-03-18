@@ -31,11 +31,12 @@ node --version
 ## 3단계: Python 설치 확인 (Module 4~5용)
 
 ```bash
-python3 --version
+python3 --version   # Mac/Linux
+python --version    # Windows
 ```
 
 {% hint style="warning" %}
-`v3.10` 이상이어야 합니다. 설치가 안 되어 있으면 [https://www.python.org/downloads/](https://www.python.org/downloads/) 에서 설치하세요.
+`v3.10` 이상이어야 합니다. 설치가 안 되어 있으면 [https://www.python.org/downloads/](https://www.python.org/downloads/) 에서 설치하세요. Windows에서는 설치 시 **"Add python.exe to PATH"** 체크박스를 반드시 선택하세요!
 {% endhint %}
 
 ## 4단계: Kiro에서 새 프로젝트 시작

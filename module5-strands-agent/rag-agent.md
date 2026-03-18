@@ -46,8 +46,8 @@ Part 1에서 GS25 발주 시스템을 설명했던 것과 같은 패턴입니다
 ```
 기술스택은 다음과 같습니다.
 - Language: Python 3.10+
-- Agent Framework: Strands Agents SDK (strands-agents, strands-agents-bedrock)
-- LLM: Amazon Bedrock Claude 3.5 Sonnet (anthropic.claude-3-5-sonnet-20241022-v2:0)
+- Agent Framework: Strands Agents SDK (strands-agents)
+- LLM: Amazon Bedrock Claude Sonnet 4 (us.anthropic.claude-sonnet-4-20250514-v1:0)
 - RAG: Amazon Bedrock Knowledge Base (Retrieve API 사용)
 - API Server: FastAPI + Uvicorn
 - Frontend: 단일 HTML 파일 (채팅 UI)
@@ -55,13 +55,17 @@ Part 1에서 GS25 발주 시스템을 설명했던 것과 같은 패턴입니다
 ```
 {% endcode %}
 
+{% hint style="warning" %}
+**모델 ID 주의사항**: Bedrock에서 on-demand 모델을 직접 호출하려면 **cross-region inference profile ID** (예: `us.anthropic.claude-sonnet-4-20250514-v1:0`)를 사용해야 합니다. `anthropic.claude-...` 형태의 기본 모델 ID로는 호출이 안 될 수 있습니다.
+{% endhint %}
+
 <details>
 <summary>💡 위 기술스택이 뭔지 궁금하다면?</summary>
 
 | 용어 | 쉬운 설명 |
 |------|-----------|
 | **Strands Agents SDK** | AI에게 도구를 쓰는 능력을 부여하는 프레임워크 |
-| **Bedrock Claude** | AI의 두뇌 역할 (답변 생성) |
+| **Bedrock Claude** | AI의 두뇌 역할 (답변 생성). Cross-region inference profile ID 사용 |
 | **Knowledge Base Retrieve API** | 문서를 검색하는 API |
 | **FastAPI** | 채팅 UI와 에이전트를 연결하는 웹 서버 |
 
@@ -80,6 +84,7 @@ Part 1에서 GS25 발주 시스템을 설명했던 것과 같은 패턴입니다
    - boto3의 bedrock-agent-runtime 클라이언트로 Retrieve API를 호출합니다
    - Knowledge Base ID는 환경변수 또는 상수로 설정합니다
    - BedrockModel을 사용하여 Claude 모델을 연결합니다
+   - 모델 ID는 cross-region inference profile ID를 사용합니다 (us.anthropic.claude-sonnet-4-20250514-v1:0)
 
 2. 검색 도구 (search_gs25_knowledge):
    - 입력: 검색 질문 (str)
@@ -95,7 +100,7 @@ Part 1에서 GS25 발주 시스템을 설명했던 것과 같은 패턴입니다
    - 한국어로 친절하게, 출처와 함께 답변
 
 4. Agent 생성:
-   - model: BedrockModel (Claude 3.5 Sonnet)
+   - model: BedrockModel (Claude Sonnet 4)
    - tools: [search_gs25_knowledge]
    - system_prompt: 위 시스템 프롬프트
 ```
@@ -186,7 +191,7 @@ requirements를 작성해주세요.
 
 {% code title="📋 복사해서 붙여넣기" %}
 ```
-Task를 정의해주세요.
+Task를 5개로 정의해주세요.
 ```
 {% endcode %}
 
