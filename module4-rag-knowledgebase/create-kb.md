@@ -8,7 +8,14 @@ description: AWS 콘솔에서 Bedrock Knowledge Base를 직접 만들어봅니�
 
 Knowledge Base에 넣을 **GS25 매장 운영 문서**를 준비합니다. 아래 3개 파일을 로컬에 만들어주세요.
 
+{% file src="../.gitbook/assets/gs25_order_policy.md" %}
+
+{% file src="../.gitbook/assets/gs25_product_catalog.md" %}
+
+{% file src="../.gitbook/assets/gs25_store_operations.md" %}
+
 <details>
+
 <summary>gs25_product_catalog.md (클릭해서 복사)</summary>
 
 ```markdown
@@ -40,6 +47,7 @@ Knowledge Base에 넣을 **GS25 매장 운영 문서**를 준비합니다. 아�
 </details>
 
 <details>
+
 <summary>gs25_order_policy.md (클릭해서 복사)</summary>
 
 ```markdown
@@ -83,6 +91,7 @@ Knowledge Base에 넣을 **GS25 매장 운영 문서**를 준비합니다. 아�
 </details>
 
 <details>
+
 <summary>gs25_store_operations.md (클릭해서 복사)</summary>
 
 ```markdown
@@ -128,7 +137,7 @@ Knowledge Base에 넣을 **GS25 매장 운영 문서**를 준비합니다. 아�
 
 </details>
 
----
+***
 
 ## Step 2: S3에 문서 업로드
 
@@ -153,7 +162,7 @@ Knowledge Base에 넣을 **GS25 매장 운영 문서**를 준비합니다. 아�
 버킷 리전을 반드시 **us-east-1**로 설정하세요! Bedrock Knowledge Base와 같은 리전이어야 합니다.
 {% endhint %}
 
----
+***
 
 ## Step 3: Knowledge Base 만들기
 
@@ -166,29 +175,29 @@ Knowledge Base에 넣을 **GS25 매장 운영 문서**를 준비합니다. 아�
 
 ### 기본 정보 입력
 
-| 항목 | 입력값 |
-|------|--------|
-| Name | `gs25-knowledge-base` |
-| Description | `GS25 편의점 운영 정보 Knowledge Base` |
-| IAM role | **Create and use a new service role** 선택 |
+| 항목          | 입력값                                      |
+| ----------- | ---------------------------------------- |
+| Name        | `gs25-knowledge-base`                    |
+| Description | `GS25 편의점 운영 정보 Knowledge Base`          |
+| IAM role    | **Create and use a new service role** 선택 |
 
 **Next** 클릭
 
 ### 데이터 소스 설정
 
-| 항목 | 입력값 |
-|------|--------|
-| Data source name | `gs25-s3-data` |
-| S3 URI | `s3://gs25-kb-data-{본인계정ID}/` |
+| 항목               | 입력값                           |
+| ---------------- | ----------------------------- |
+| Data source name | `gs25-s3-data`                |
+| S3 URI           | `s3://gs25-kb-data-{본인계정ID}/` |
 
 **Next** 클릭
 
 ### 임베딩 모델 & 벡터 스토어
 
-| 항목 | 입력값 |
-|------|--------|
-| Embeddings model | **Titan Text Embeddings V2** |
-| Vector store | **Quick create a new vector store** 선택 |
+| 항목               | 입력값                                    |
+| ---------------- | -------------------------------------- |
+| Embeddings model | **Titan Text Embeddings V2**           |
+| Vector store     | **Quick create a new vector store** 선택 |
 
 {% hint style="info" %}
 **Quick create**를 선택하면 Amazon OpenSearch Serverless가 자동으로 만들어집니다. 복잡한 설정이 필요 없어요!
@@ -198,11 +207,11 @@ Knowledge Base에 넣을 **GS25 매장 운영 문서**를 준비합니다. 아�
 
 ### 데이터 동기화 (Sync)
 
-Knowledge Base가 만들어지면 (약 1~2분):
+Knowledge Base가 만들어지면 (약 1\~2분):
 
 1. 생성된 Knowledge Base 페이지에서 **Data source** 섹션 확인
 2. 데이터 소스를 선택하고 **Sync** 클릭
-3. 완료될 때까지 대기 (약 1~3분)
+3. 완료될 때까지 대기 (약 1\~3분)
 
 {% hint style="success" %}
 Status가 **Available**로 바뀌면 완성! 문서가 검색 가능한 상태가 되었습니다.
