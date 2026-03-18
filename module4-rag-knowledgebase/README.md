@@ -2,7 +2,7 @@
 description: RAG가 뭔지 알아보고, Bedrock Knowledge Base를 직접 만들어봅니다
 ---
 
-# Module 4: RAG와 Bedrock Knowledge Base
+# 모듈 개요
 
 ## 이 모듈에서 할 것
 
@@ -44,6 +44,18 @@ aws configure
 
 {% hint style="info" %}
 AWS Access Key가 없다면 IAM 콘솔에서 **사용자 > 보안 자격 증명 > 액세스 키 만들기**로 생성할 수 있습니다.
+
+AWS Event Workshop 에 참여하고 계신 분들께서는 아래와 같이 자격 증명을 획득하세요.
+
+* Workshop Studio 콘솔로 돌아갑니다.
+* 좌측 메뉴에서 **"Get AWS CLI credentials"** 메뉴를 클릭합니다.
+* 다음 정보를 확인하고 복사하여 메모장에 저장해둡니다:
+  * **AWS Access Key ID**: `ASIA...`로 시작하는 키
+  * **AWS Secret Access Key**: 비밀 액세스 키
+  * **AWS Session Token**: 임시 세션 토큰 (있는 경우)
+  * **AWS Default Region**: 리전 정보 (예: `us-east-1`)
+
+![](../.gitbook/assets/image.png)![](<../.gitbook/assets/image (1).png>)
 {% endhint %}
 
 ## 모듈 구성
