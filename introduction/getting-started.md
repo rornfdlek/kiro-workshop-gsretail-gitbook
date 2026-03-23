@@ -28,7 +28,19 @@ node --version
 터미널(또는 명령 프롬프트)에 위 명령어를 입력했을 때 `v18` 이상의 숫자가 나오면 준비 완료입니다! 만약 "command not found"가 뜨면 [https://nodejs.org/](https://nodejs.org/) 에서 설치해주세요.
 {% endhint %}
 
-## 3단계: Python 설치 확인 (Module 4~5용)
+{% hint style="info" %}
+**어디에 어떻게 명령어를 입력해야 할 지 모르시겠다면,&#x20;**<mark style="color:purple;">**Kiro 에게 설치를 맡겨도 됩니다!**</mark>
+
+<mark style="color:purple;">**채팅 창에 아래와 같이 입력해보세요!**</mark>
+
+```powershell
+node --version 확인하고 없으면 설치해줘.
+```
+
+![](../.gitbook/assets/image.png)![](<../.gitbook/assets/image (1).png>)![](<../.gitbook/assets/image (2).png>)![](<../.gitbook/assets/image (3).png>)
+{% endhint %}
+
+## 3단계: Python 설치 확인 (Module 4\~5용)
 
 ```bash
 python3 --version   # Mac/Linux
@@ -37,6 +49,18 @@ python --version    # Windows
 
 {% hint style="warning" %}
 `v3.10` 이상이어야 합니다. 설치가 안 되어 있으면 [https://www.python.org/downloads/](https://www.python.org/downloads/) 에서 설치하세요. Windows에서는 설치 시 **"Add python.exe to PATH"** 체크박스를 반드시 선택하세요!
+{% endhint %}
+
+{% hint style="info" %}
+**잘 모르시겠다면 이 경우에도 역시&#x20;**<mark style="color:purple;">**Kiro 에게 설치를 맡기시면 됩니다!**</mark>
+
+<mark style="color:purple;">**채팅 창에 아래와 같이 입력해보세요!**</mark>
+
+```powershell
+python --version 확인하고 없으면 설치해줘.
+```
+
+![](<../.gitbook/assets/image (4).png>)![](<../.gitbook/assets/image (5).png>)![](<../.gitbook/assets/image (6).png>)
 {% endhint %}
 
 ## 4단계: Kiro에서 새 프로젝트 시작

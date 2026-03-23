@@ -55,7 +55,7 @@ AWS Event Workshop 에 참여하고 계신 분들께서는 아래와 같이 자�
   * **AWS Session Token**: 임시 세션 토큰 (있는 경우)
   * **AWS Default Region**: 리전 정보 (예: `us-east-1`)
 
-![](../.gitbook/assets/image.png)![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (8).png>)![](<../.gitbook/assets/image (1) (1).png>)
 {% endhint %}
 
 ## 모듈 구성
