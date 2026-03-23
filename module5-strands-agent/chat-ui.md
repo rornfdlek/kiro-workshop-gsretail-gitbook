@@ -36,6 +36,12 @@ pip install strands-agents fastapi uvicorn boto3
 `strands-agents-bedrock`은 별도 패키지가 아니라 `strands-agents`에 포함되어 있으므로 따로 설치할 필요 없습니다.
 {% endhint %}
 
+{% hint style="success" %}
+**직접 설치하지 않아도 됩니다!&#x20;**<mark style="color:purple;">**Kiro chat 에 위 명령어를 붙여넣어 보세요!**</mark>&#x20;
+
+<mark style="color:purple;">**Kiro가 알아서 가상환경을 만들고 패키지를 설치해줄 거예요!**</mark>
+{% endhint %}
+
 ***
 
 ## 실행하기
