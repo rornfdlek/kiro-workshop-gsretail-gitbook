@@ -200,7 +200,7 @@ Knowledge Base에 넣을 **GS25 매장 운영 문서**를 준비합니다. 아�
 | Vector store     | **Quick create a new vector store** 선택 |
 
 {% hint style="info" %}
-**Quick create**를 선택하면 Amazon OpenSearch Serverless가 자동으로 만들어집니다. 복잡한 설정이 필요 없어요!
+**Quick create**를 선택하고, Amazon OpenSearch Serverless를 벡터스토어로 선택하여 Create을 진행하면 뒷단에서 Opensearch Serverless가 자동으로 구성되어 만들어집니다. 복잡한 설정이 필요 없어요!
 {% endhint %}
 
 **Next** 클릭 → 설정 확인 → **Create knowledge base** 클릭
